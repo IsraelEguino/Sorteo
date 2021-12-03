@@ -29,4 +29,3 @@ const boletoSchema = new mongoose.Schema(
 
 const boleto = mongoose.model('boletos', boletoSchema, 'boletos');
 module.exports = boleto;
-
