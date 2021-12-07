@@ -2,8 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
-const router = require('../rutas/rutas');
-const ErrorHandler = require('../errorHandler/errorHandler');
+const router = require('../rutas/rutas.js');
+const ErrorHandler = require('../errorHandler/errorHandler.js');
 
 
 const app = express();

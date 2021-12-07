@@ -1,6 +1,6 @@
 const express = require('express');
-const sorteo = require('../controladores/sorteoController');
-const boleto = require('../controladores/boletoController');
+const sorteo = require('../controladores/sorteoController.js');
+const boleto = require('../controladores/boletoController.js');
 
 const router = express.Router();
 
