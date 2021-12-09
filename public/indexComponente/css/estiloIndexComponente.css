@@ -24,6 +24,14 @@ main {
     justify-content: space-evenly;
 }
 
+.contenido{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 
 .card {
@@ -37,6 +45,7 @@ main {
     background-color: #270D53;
     
 }
+
 
 .description {
     height: 50%;
@@ -63,6 +72,17 @@ main {
     min-width: 300px;
     min-height: 600px;    
     margin: 0;   
+    
+}
+
+.monto {
+    position: relative;
+    width: 360px;
+    min-height: 600px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
 }
 
@@ -171,16 +191,6 @@ main {
     height: 20px;
     border: solid 3px #6100FF;
     background-color:rgb(97,0,255,0.3);
-}
-
-.monto {
-    width: 360px;
-    min-height: 600px;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
 }
 
 

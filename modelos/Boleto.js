@@ -24,8 +24,8 @@ const boletoSchema = new mongoose.Schema(
             autopopulate: true,
         },
     },
-    { collection: 'boleto', versionKey: false }
+    { collection: 'Boleto', versionKey: false }
 );
 
-const boleto = mongoose.model('boletos', boletoSchema, 'boletos');
+const boleto = mongoose.model('Boleto', boletoSchema, 'Boleto');
 module.exports = boleto;

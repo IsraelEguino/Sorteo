@@ -28,8 +28,8 @@ const sorteoSchema = new mongoose.Schema(
             },
         ],
     },
-    { collection: 'sorteo', versionKey: false }
+    { collection: 'Sorteo', versionKey: false }
 );
 
-const sorteo = mongoose.model('sorteos', sorteoSchema, 'sorteos');
+const sorteo = mongoose.model('Sorteo', sorteoSchema, 'Sorteo');
 module.exports = sorteo;

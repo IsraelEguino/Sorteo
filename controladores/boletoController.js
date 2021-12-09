@@ -1,5 +1,5 @@
 const boleto = require("../modelos/boleto");
-
+const bd = require('mongoose')
 const crearBoletos = (numMin, numMax) => {
     const boletos = [];
     for (let i = numMin; i <= numMax; i++) {
@@ -67,8 +67,8 @@ const eliminarBoleto = (req, res) => {
     });
 };
 
-const actualizarBoleto = (req, res) => {
-    boleto.findByIdAndUpdate(req.params.id, req.body, (err, boleto) => {
+const actualizarBoleto = async (req) => {
+    /*boleto.findByIdAndUpdate(req.params.id, req.body, (err, boleto) => {
         if (err) {
             res.status(400).json({
                 status: 'error',
@@ -80,7 +80,39 @@ const actualizarBoleto = (req, res) => {
                 data: boleto,
             });
         }
-    });
+    });*/
+
+    try{
+        /*const dbName = 'Sorteos';
+        const user = 'feel_joe';
+        const password = 'StdP3875';
+        const uri = `mongodb+srv://${user}:${password}@cluster0.uhfd5.mongodb.net/${dbName}?retryWrites=true&w=majority`;
+        bd.connect(uri)
+        .then(() => console.log('Connection successful'))
+        .catch((err) => console.log(err));*/
+        var myquery = { "_id": req.body._id };
+        var newvalues =  req.body;
+        console.log(myquery);
+        console.log(newvalues);
+        const res = await boleto.updateOne(myquery,newvalues);
+        console.log("Un boleto ha sido actualizado");
+        return res
+    } catch(e){
+        console.log("No funcionó :c" + e);
+    } 
+
+
+    /*try {
+            var dbo = db.db("Sorteos");
+            var myquery = { "_id": id };
+            const res = await dbo.collection("rifa").deleteOne(myquery);
+            console.log("Una rifa ha sido eliminada");
+            console.log({ rifa: res });
+            return res;
+
+        } catch (e) {
+            console.error(e);
+        }*/
 };
 
 module.exports = {

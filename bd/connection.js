@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
+const dbName = 'Sorteos';
 const user = 'feel_joe';
 const password = 'StdP3875';
-const dbName = 'Sorteos';
 const uri = `mongodb+srv://${user}:${password}@cluster0.uhfd5.mongodb.net/${dbName}?retryWrites=true&w=majority`;
 
 
