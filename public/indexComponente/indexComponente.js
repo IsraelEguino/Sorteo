@@ -178,7 +178,7 @@ class BoletosSorteo extends HTMLElement {
                 }else {
     
                     fetch('http://localhost:3000/api/boletos', {
-                        method: 'GET',
+                        method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
                         },
